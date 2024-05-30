@@ -29,8 +29,8 @@ export class AdminloginService {
       `${this.apiUrl}/GetUserById/${id}`
     );
   }
-  UpdateUser(data: user) {
-    return this.http.post(`${this.apiUrl}/UpdateUser`, data);
+  UpdateUser(user: user) {
+    return this.http.put(`${this.apiUrl}/UpdateUser`, user,{responseType:'json'});
   }
 
   loginUser(loginInfo:Array<string>){
