@@ -51,8 +51,9 @@ export class MissionskillComponent implements OnInit {
       {
         this.toast.success({detail:"SUCCESS",summary:data.data,duration:3000});
         this.CloseDeleteSkillModal();
+        this.GetMissionSkillList();
         setTimeout(() => {
-          this.route.navigate(['admin/missionSkill']);
+          this.route.navigate(['/admin/missionSkill']);
         }, 1000);
       }
       else
